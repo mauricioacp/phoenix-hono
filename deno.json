@@ -1,0 +1,22 @@
+{
+  "imports": {
+    "@/": "./src/",
+    "@fabon/vremel": "jsr:@fabon/vremel@^0.3.4",
+    "@logtape/logtape": "jsr:@logtape/logtape@^0.8.0",
+    "@std/assert": "https://deno.land/std@0.208.0/assert/mod.ts",
+    "@hono": "https://deno.land/x/hono@v4.3.11/mod.ts",
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.3",
+    "@supabase/supabase-js": "jsr:@supabase/supabase-js@^2.47.10"
+  },
+  "tasks": {
+    "dev": "deno serve --watch --allow-net --allow-env --allow-read src/main.ts",
+    "start": "deno run --allow-net main.ts",
+    "test": "deno test --allow-net --allow-env",
+    "lint": "deno lint --unstable",
+    "format": "deno fmt --ignore=dist"
+  },
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "hono/jsx"
+  }
+}
